@@ -40,13 +40,13 @@ impl Lobby {
         let reference_space = interaction::get_reference_space(&xr_session, reference_space_type);
 
         let swapchains = [
-            graphics::create_swapchain(&xr_session, &gfx_ctx, view_resolution, SDR_FORMAT_GL, None),
-            graphics::create_swapchain(&xr_session, &gfx_ctx, view_resolution, SDR_FORMAT_GL, None),
+            graphics::create_swapchain(&xr_session, &gfx_ctx, UVec2::new(2400, 2400), SDR_FORMAT_GL, None),
+            graphics::create_swapchain(&xr_session, &gfx_ctx, UVec2::new(2400, 2400), SDR_FORMAT_GL, None),
         ];
 
         let renderer = LobbyRenderer::new(
             gfx_ctx,
-            view_resolution,
+            UVec2::new(2400, 2400),
             [
                 swapchains[0]
                     .enumerate_images()
