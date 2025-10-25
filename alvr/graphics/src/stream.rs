@@ -518,12 +518,9 @@ pub fn foveated_encoding_shader_constants(
 }
 
 pub fn compute_target_view_resolution(
-    resolution: UVec2,
-    upscaling: &Option<UpscalingConfig>,
+    _resolution: UVec2,
+    _upscaling: &Option<UpscalingConfig>,
 ) -> UVec2 {
-    let mut target_resolution = resolution.as_vec2();
-    if let Some(upscaling) = upscaling {
-        target_resolution *= upscaling.upscale_factor;
-    }
-    target_resolution.as_uvec2()
+    UVec2::new(2160, 2160)
 }
+
