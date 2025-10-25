@@ -17,6 +17,8 @@ jobs:
       release_id: ${{ steps.create_release.outputs.id }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          repository: "cacheninetynine/ALVR-2"
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
@@ -55,6 +57,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          repository: "cacheninetynine/ALVR-2"
           ref: ${{ needs.prepare_release.outputs.release_ref }}
           submodules: true
       - uses: actions-rs/toolchain@v1
@@ -111,6 +114,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          repository: "cacheninetynine/ALVR-2"
           ref: ${{ needs.prepare_release.outputs.release_ref }}
           submodules: true
       - uses: actions-rs/toolchain@v1
@@ -148,6 +152,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          repository: "cacheninetynine/ALVR-2"
           ref: ${{ needs.prepare_release.outputs.release_ref }}
       - uses: actions-rs/toolchain@v1
         with:
@@ -181,6 +186,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          repository: "cacheninetynine/ALVR-2"
           ref: ${{ needs.prepare_release.outputs.release_ref }}
           submodules: true
       - uses: actions-rs/toolchain@v1
@@ -217,6 +223,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          repository: "cacheninetynine/ALVR-2"
           ref: ${{ needs.prepare_release.outputs.release_ref }}
           submodules: true
       - uses: actions-rs/toolchain@v1
@@ -255,6 +262,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          repository: "cacheninetynine/ALVR-2"
           ref: ${{ needs.prepare_release.outputs.release_ref }}
       - uses: actions-rs/toolchain@v1
         with:
@@ -286,6 +294,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          repository: "cacheninetynine/ALVR-2"
           ref: ${{ needs.prepare_release.outputs.release_ref }}
 
       - name: Build and install dependencies
@@ -318,6 +327,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          repository: "cacheninetynine/ALVR-2"
           ref: ${{ needs.prepare_release.outputs.release_ref }}
           submodules: true
       - uses: actions-rs/toolchain@v1
