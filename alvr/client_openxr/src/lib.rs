@@ -245,8 +245,8 @@ pub fn entry_point() {
         assert_eq!(views_config.len(), 2);
 
         let default_view_resolution = UVec2::new(
-            2160,
-            2160,
+            2400,
+            2400,
         );
 
         let refresh_rates = if exts.fb_display_refresh_rate {
